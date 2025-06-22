@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: hsl(30,38%,92%); font-family: 'Montserrat', sans-serif; }
+    .card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 600px; max-width: 90vw;
+      background: #FFF;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+    }
+    .card__image {
+      background: url('https://i.ibb.co/xzq5YWH/image-product-desktop.jpg') center/cover no-repeat;
+    }
+    .card__content {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card__category {
+      text-transform: uppercase; letter-spacing: 5px;
+      font-size: 12px; color: hsl(228,12%,48%);
+    }
+    .card__title {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      margin: 16px 0;
+      color: hsl(212,21%,14%);
+    }
+    .card__description {
+      flex: 1;
+      font-size: 14px; line-height: 1.7;
+      color: hsl(228,12%,48%);
+      margin-bottom: 24px;
+    }
+    .card__pricing {
+      display: flex; align-items: center; gap: 16px;
+    }
+    .card__price--current {
+      font-family: 'Fraunces', serif;
+      color: hsl(158,36%,37%);
+      font-size: 1.5rem;
+    }
+    .card__price--old {
+      font-size: 14px;
+      text-decoration: line-through;
+      color: hsl(228,12%,48%);
+    }
+    .card__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+      padding: 14px 0;
+      background-color: hsl(158,36%,37%);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .card__btn:hover {
+      background-color: hsl(156,42%,18%);
+    }
+    .card__btn svg {
+      width: 16px; height: 16px;
+    }
+    @media (max-width: 768px) {
+      .card { grid-template-columns: 1fr; }
+      .card__image { height: 240px; }
+    }
+  </style>
+  <title>Amazon‑Style Product Card</title>
+</head>
+<body>
+  <div class="card">
+    <div class="card__image"></div>
+    <div class="card__content">
+      <div>
+        <p class="card__category">Perfumery</p>
+        <h1 class="card__title">Gabrielle Essence Eau De Parfum</h1>
+        <p class="card__description">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer‑Creator for the House of CHANEL.
+        </p>
+      </div>
+      <div>
+        <div class="card__pricing">
+          <span class="card__price--current">$149.99</span>
+          <span class="card__price--old">$169.99</span>
+        </div>
+        <button class="card__btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 16"><path d="M14.383 ..." fill="#FFF"/></svg>
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
